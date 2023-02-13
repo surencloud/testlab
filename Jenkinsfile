@@ -5,6 +5,13 @@ pipeline {
     jdk 'jdk17'
   }
   stages {
+    stage ('Initialize') {
+                steps {
+                    sh '''
+                        echo "PATH = ${PATH}"
+                    '''
+                }
+            }
     stage ('Build') {
       steps {
         sh 'mvn clean'
