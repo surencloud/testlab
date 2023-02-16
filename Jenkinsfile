@@ -14,7 +14,7 @@ pipeline {
     }
     stage ('Build') {
       steps {
-            sh 'mvn -f SpringBoot/pom.xml spring-boot:run'
+            sh 'mvn -f SpringBoot/pom.xml clean package'
       }
     }
   }
